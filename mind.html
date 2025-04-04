@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindMate+ - Your Mental Wellness Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 100%);
+        }
+        .mood-btn {
+            transition: all 0.2s ease;
+        }
+        .mood-btn:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-brain text-teal-500 text-2xl"></i>
+                <span class="text-xl font-semibold text-gray-800">MindMate+</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#features" class="text-gray-600 hover:text-teal-500 transition">Features</a>
+                <a href="#resources" class="text-gray-600 hover:text-teal-500 transition">Resources</a>
+                <a href="#community" class="text-gray-600 hover:text-teal-500 transition">Community</a>
+            </div>
+            <div class="flex space-x-4">
+                <button class="px-4 py-2 text-gray-600 hover:text-teal-500 transition">Log In</button>
+                <button class="px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition transform hover:scale-105">
+                    Sign Up
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+                    Your Personalized <br>Mental Wellness Hub
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-md">
+                    Track your mood, discover resources, and build healthy habits in a safe, supportive space.
+                </p>
+                <div class="flex space-x-4">
+                    <button class="px-6 py-3 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition transform hover:scale-105">
+                        Get Started
+                    </button>
+                    <button class="px-6 py-3 border border-teal-500 text-teal-500 rounded-lg hover:bg-teal-50 transition">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="bg-white p-6 rounded-xl shadow-lg w-full max-w-md transform transition hover:shadow-xl">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">How are you feeling today?</h3>
+                    <div class="flex justify-between mb-6">
+                        <button class="emoji-btn text-4xl hover:scale-110 transition" data-mood="1" title="Very Sad">😢</button>
+                        <button class="emoji-btn text-4xl hover:scale-110 transition" data-mood="2" title="Sad">😞</button>
+                        <button class="emoji-btn text-4xl hover:scale-110 transition" data-mood="3" title="Neutral">😐</button>
+                        <button class="emoji-btn text-4xl hover:scale-110 transition" data-mood="4" title="Happy">😊</button>
+                        <button class="emoji-btn text-4xl hover:scale-110 transition" data-mood="5" title="Very Happy">😁</button>
+                    </div>
+                    <textarea 
+                        class="w-full p-3 border border-gray-200 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-teal-300 transition" 
+                        placeholder="Add a note (optional)"
+                        rows="3"
+                    ></textarea>
+                    <button class="w-full py-3 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition transform hover:scale-105">
+                        Log Mood
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Key Features</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Original Features -->
+                <div class="bg-gray-50 p-6 rounded-xl hover:shadow-md transition transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-teal-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Smart Mood Journal</h3>
+                    <p class="text-gray-600">
+                        Track your emotional patterns with beautiful visual timelines and receive personalized insights.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl hover:shadow-md transition transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-book text-blue-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Resource Library</h3>
+                    <p class="text-gray-600">
+                        Access our curated collection of mental health resources tailored to your specific needs.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl hover:shadow-md transition transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-hands-praying text-purple-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Guided Exercises</h3>
+                    <p class="text-gray-600">
+                        Practice mindfulness and coping techniques with our step-by-step audio and video guides.
+                    </p>
+                </div>
+
+                <!-- New Features -->
+                <div class="bg-gray-50 p-6 rounded-xl hover:shadow-md transition transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-robot text-pink-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Personalized Recommendations</h3>
+                    <p class="text-gray-600">
+                        Get AI-powered suggestions based on your mood patterns and emotional state.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl hover:shadow-md transition transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-moon text-indigo-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Sleep Tracker</h3>
+                    <p class="text-gray-600">
+                        Log sleep duration and quality, with correlations to your mood data.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl hover:shadow-md transition transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-wind text-green-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Breathing Exercises</h3>
+                    <p class="text-gray-600">
+                        Guided breathing techniques with customizable durations and patterns.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl hover:shadow-md transition transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-heart text-yellow-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Gratitude Journal</h3>
+                    <p class="text-gray-600">
+                        Daily prompts to list things you're grateful for, with mood correlation.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl hover:shadow-md transition transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-users text-red-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Community Support</h3>
+                    <p class="text-gray-600">
+                        Anonymous peer support with moderated discussions on various topics.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl hover:shadow-md transition transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-user-md text-blue-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Professional Directory</h3>
+                    <p class="text-gray-600">
+                        Find therapists and counselors filtered by specialty and location.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl hover:shadow-md transition transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-first-aid text-orange-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Crisis Support</h3>
+                    <p class="text-gray-600">
+                        Emergency contacts and step-by-step crisis management resources.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl hover:shadow-md transition transform hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-trophy text-teal-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Progress Dashboard</h3>
+                    <p class="text-gray-600">
+                        Visualize your mood trends and celebrate wellness milestones.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Sections -->
+    <section id="resources" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Wellness Resources</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4 text-teal-600">Articles & Guides</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-book-open text-teal-500 mt-1 mr-3"></i>
+                            <span>Understanding Anxiety Disorders</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-book-open text-teal-500 mt-1 mr-3"></i>
+                            <span>10 Tips for Better Sleep</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-book-open text-teal-500 mt-1 mr-3"></i>
+                            <span>Building Resilience</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-600">Interactive Tools</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-brain text-blue-500 mt-1 mr-3"></i>
+                            <span>Breathing Exercise Timer</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-brain text-blue-500 mt-1 mr-3"></i>
+                            <span>Gratitude Journal</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-brain text-blue-500 mt-1 mr-3"></i>
+                            <span>Mindfulness Reminders</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="py-20 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Join Our Supportive Community</h2>
+            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                Connect with others who understand what you're going through in our safe, moderated forums.
+            </p>
+            <div class="max-w-4xl mx-auto bg-gray-50 p-8 rounded-xl">
+                <div class="grid md:grid-cols-2 gap-8 text-left">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Forum Features</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-teal-500 mt-1 mr-3"></i>
+                                <span>Anonymous posting options</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-teal-500 mt-1 mr-3"></i>
+                                <span>Topic-based discussions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-teal-500 mt-1 mr-3"></i>
+                                <span>Professional moderation</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Weekly Events</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-calendar-alt text-blue-500 mt-1 mr-3"></i>
+                                <span>Group meditation sessions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-calendar-alt text-blue-500 mt-1 mr-3"></i>
+                                <span>Expert Q&A</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-calendar-alt text-blue-500 mt-1 mr-3"></i>
+                                <span>Community check-ins</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-teal-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Ready to start your wellness journey?</h2>
+            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                Join thousands of others taking control of their mental health with MindMate+.
+            </p>
+            <button class="px-8 py-3 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition transform hover:scale-105">
+                Sign Up - It's Free
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-brain text-teal-500 text-2xl"></i>
+                        <span class="text-xl font-semibold">MindMate+</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Your personalized mental wellness companion.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Features</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition">Mood Tracker</a></li>
+                        <li><a href="#resources" class="text-gray-400 hover:text-white transition">Resources</a></li>
+                        <li><a href="#community" class="text-gray-400 hover:text-white transition">Community</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2023 MindMate+. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced Mood Tracker Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const moodButtons = document.querySelectorAll('.emoji-btn');
+            const moodNote = document.querySelector('textarea');
+            const logButton = document.querySelector('.mood-tracker button');
+            
+            let selectedMood = null;
+            
+            moodButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove selection from all buttons
+                    moodButtons.forEach(btn => {
+                        btn.classList.remove('ring-2', 'ring-teal-500');
+                    });
+                    
+                    // Add selection to clicked button
+                    this.classList.add('ring-2', 'ring-teal-500');
+                    selectedMood = this.dataset.mood;
+                    
+                    // Add subtle animation
+                    this.style.transform = 'scale(1.2)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1.1)';
+                    }, 200);
+                });
+            });
+            
+            logButton.addEventListener('click', function() {
+                if (!selectedMood) {
+                    alert('Please select how you feel today');
+                    return;
+                }
+                
+                const note = moodNote.value;
+                console.log('Logged mood:', selectedMood, 'Note:', note);
+                
+                // Show confirmation
+                this.textContent = '✓ Logged!';
+                this.classList.remove('bg-teal-500', 'hover:bg-teal-600');
+                this.classList.add('bg-green-500', 'hover:bg-green-600');
+                
+                // Reset after 2 seconds
+                setTimeout(() => {
+                    moodButtons.forEach(btn => {
+                        btn.classList.remove('ring-2', 'ring-teal-500');
+                    });
+                    moodNote.value = '';
+                    selectedMood = null;
+                    this.textContent = 'Log Mood';
+                    this.classList.remove('bg-green-500', 'hover:bg-green-600');
+                    this.classList.add('bg-teal-500', 'hover:bg-teal-600');
+                }, 2000);
+            });
+            
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
